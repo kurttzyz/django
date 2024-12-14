@@ -1,0 +1,1 @@
+web gunicorn Floppy Bird.wsgi:application --log-file -
