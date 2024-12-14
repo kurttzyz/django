@@ -1,2 +1,2 @@
 # django
-hehe
+This is a django project
