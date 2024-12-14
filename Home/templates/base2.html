@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+  <title>
+    {% block title %}
+    Flappybet.gg
+    {% endblock %}
+  </title>
+  
+</head>
+<body>
+  <header class="bg-dark text-white p-3 text-center">
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <div>
+            <h1 class="m-0"><a href="/">
+              <img src="{% static 'images/flappybet.jpg' %}" alt="logo" class="logo"></a> Flappybet.gg</h1>
+          </div>
+    
+          <!-- Navigation Links -->
+          <nav>
+            <ul class="list-inline m-0">
+              <li class="list-inline-item mx-2"><a href="/" class="text-white text-decoration-none">Home</a></li>
+              <li class="list-inline-item mx-2"><a href="/play2win.games/" class="text-white text-decoration-none">Games</a></li>
+              <li class="list-inline-item mx-2"><a href="/play2win.rewards/" class="text-white text-decoration-none">Rewards</a></li>
+              <li class="list-inline-item mx-2"><a href="/play2win.customer_service/" class="text-white text-decoration-none">Customer Service</a></li>
+              <li class="list-inline-item mx-2"><a href="/play2win.register/" class="text-white text-decoration-none">Register</a></li>
+              <li class="list-inline-item mx-2"><a href="/accounts/login/" class="text-white text-decoration-none">Log In</a></li>
+            </ul>
+          </nav>
+  </header>
+
+  
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src = "{% static 'js/script.js' %}"></script>
+</body>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Flappybet.gg | All rights reserved</p>
+  </footer>
+</html>

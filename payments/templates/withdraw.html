@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<title>Withdraw | Flappybet.gg</title>
+<main class="content">
+    <link rel="stylesheet" href="{% static 'css/withdraw-style.css' %}">
+    <h1>Withdraw Funds</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="amount">Withdraw Amount:</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount to withdraw" required>
+
+        <label for="phone-number">Phone Number:</label>
+        <input type="number" id="phone-number" name="phone_number" placeholder="Enter your phone number" required>
+
+        <label for="payment-method">Select Payment Method:</label>
+        <select id="payment-method" name="payment_method" required>
+            <option value="gcash">GCash</option>
+            <option value="paymaya">PayMaya</option>
+        </select>
+        
+        <button type="submit" class="btn-submit">Withdraw</button>
+    </form>
+</main>
+{% endblock %}

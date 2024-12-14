@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/deposit-style.css' %}">
+</head>
+<body class="dark-theme">
+        <body class="dark-theme">
+            <!-- Sidebar Toggle Button -->
+            <button class="sidebar-toggle d-lg-none" aria-label="Toggle navigation">☰</button>
+        
+            <nav class="sidebar">
+                <ul>
+                    <h3>Wallet Balance</h3>
+                    <p><strong>₱{{ wallet.balance }}</strong></p>
+                    <hr>
+                    <li><a href="/Game/dashboard/">Dashboard</a></li>
+                    <hr>
+                    <li><a href="/play2win.games/">Games</a></li>
+                    <hr>
+                    <li><a href="/Game/dashboard/">Wallet</a></li>
+                    <hr>
+                    <li><a href="/play2win.rewards/">Rewards</a></li>
+                    <hr>
+                    <li><a href="/Payments/method/">Deposit</a></li>
+                    <hr>
+                    <li><a href="/Payments/withdraw/">Withdraw</a></li>
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-logout">Log Out</button>
+                    </form>
+                </ul>
+            </nav>
+
+        <main>
+            {% block content%}
+
+            {% endblock %}
+        </main>
+    
+        <!-- Title -->
+       
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+

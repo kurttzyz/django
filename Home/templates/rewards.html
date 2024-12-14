@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+{% load static %}
+
+    {% block title %}
+    Flappybet.gg
+    {% endblock %}
+ 
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <section class="mt-5">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Ad 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="{% static 'images/ads.jpg' %}" class="card-img-top" alt="Ad 2">
+            <div class="card-body">
+              <h5 class="card-title">Exclusive Bonuses</h5>
+              <p class="card-text">Claim your exclusive bonuses on deposits and start your winning streak today!</p>
+              <a href="#" class="btn btn-success">Claim Bonus</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Referral Ad -->
+        <div class="col-md-12">
+          <div class="card bg-warning text-dark">
+            <div class="card-body text-center">
+              <h4 class="card-title">💸 Refer and Earn!</h4>
+              <p class="card-text">Invite your friends and earn up to $100 for every successful referral. Share the fun and rewards!</p>
+              <div class="d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control me-2 text-center" value="https://casino-site.com/ref/JohnDoe123" readonly>
+                <button class="btn btn-dark" onclick="copyReferralLink()">Copy Link</button>
+              </div>
+              <p class="mt-3">Start earning now by sharing your unique referral link with friends.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+{% endblock %}

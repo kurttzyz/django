@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle, #2d0064 60%, #2b0b39 100%);
+  background-image: url('/static/images/poker-table.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1a1a1a, #000);
+  padding: 20px 0;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #ffd700; /* Luxurious gold */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 15px;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffd700;
+  text-shadow: 0px 0px 10px #ffd700;
+}
+
+/* Section Styling */
+section {
+  margin-top: 50px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card.bg-warning {
+  background-color: #ffc107;
+  border: 2px solid #ffd700;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h5,
+.card-body h4 {
+  font-size: 1.5rem;
+  color: #2d0064;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-body a.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-body a.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.card-body a.btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Input Field */
+input.form-control {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+nav ul {
+  padding-top: 25px;
+}
+
+/* Button */
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  background-color: #333;
+}
+
+section {
+  flex:1;
+}
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+  nav ul li {
+      margin: 10px 0;
+  }
+}
+
+.logo {
+  width:120px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Add some space around the logo */
+  display: block; /* Center the logo inside the header */
+}
+

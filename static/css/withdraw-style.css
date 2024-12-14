@@ -1,0 +1,100 @@
+/* Ensure the body is full height and uses flexbox for centering */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298); /* Optional: Background styling */
+}
+
+/* Main content area */
+.content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f8d90f;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+    text-align: left;
+}
+
+form input,
+form select {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    border: 1px solid #f8d90f;
+}
+
+/* Button Styling */
+.btn-submit {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #f8d90f;
+    color: #1e3c72;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+    }
+
+    form input,
+    form select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .btn-submit {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}

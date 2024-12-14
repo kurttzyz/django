@@ -1,0 +1,243 @@
+/* Dark Blue Theme */
+body.dark-theme {
+    background-color: #0a1d37;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    background-color: #112f4e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Styling */
+.text-light {
+    color: #c7d1e1 !important;
+}
+
+/* Input Fields */
+.input-dark {
+    background-color: #1b3557;
+    border: 1px solid #3a5678;
+    color: #c7d1e1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-dark:focus {
+    background-color: #2c4d71;
+    border-color: #5a79a6;
+    outline: none;
+    box-shadow: 0 0 5px #3a5678;
+}
+
+/* Button Styling */
+.btn-custom {
+    background-color: #1665c1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #1158a3;
+    cursor: pointer;
+}
+
+/* Logo Styling */
+.payment-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* QR Code Styling */
+.qr-code {
+    width: 200px;
+    height: auto;
+    border: 2px solid #3a5678;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .btn-custom {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .payment-logo {
+        width: 120px;
+    }
+    .qr-code {
+        width: 150px;
+    }
+}
+
+/* Label styling */
+.form-label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Select dropdown styling */
+.form-select {
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover and focus effects */
+.form-select:hover {
+    border-color: #666;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #c7d1e1;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.logout-form {
+    margin-top: auto;
+}
+
+.btn-logout {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #cc0000;
+}
+
+/* Adjusting the main content */
+.container {
+    margin-left: 270px; /* Leave space for the sidebar */
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content input,
+.content select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}

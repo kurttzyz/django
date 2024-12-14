@@ -1,0 +1,86 @@
+/* dashboard-style.css */
+
+/* General Reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Main Content */
+.main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card Style */
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.card h3, .card h4, .card h5 {
+    color: #007bff; /* Professional blue for headings */
+    margin-bottom: 15px;
+}
+
+.card p, .card ul {
+    color: #495057; /* Neutral dark text for content */
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 8px;
+    background-color: #f1f3f5; /* Light gray for list items */
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Button Styles */
+.btn-recharge {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-recharge:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

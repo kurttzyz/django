@@ -1,0 +1,60 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/register-style.css' %}">
+
+
+{% block content %}
+<title>Flappybet.gg</title>
+<link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+<nav>
+    <h1 class="m-0"> 
+        <h1 class="m-0"><a href="/">
+          <img src="{% static 'images/flappybet.jpg' %}" alt="logo" class="logo"></a> Flappybet.gg</h1>
+            <ul class="list-inline m-0">
+            <li class="list-inline-item mx-2"><a href="/" class="text-white text-decoration-none">Home</a></li>
+            <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Games</a></li>
+            <li class="list-inline-item mx-2"><a href="/play2win.rewards/" class="text-white text-decoration-none">Rewards</a></li>
+            <li class="list-inline-item mx-2"><a href="/play2win.customer_service/" class="text-white text-decoration-none">Customer Service</a></li>
+            <li class="list-inline-item mx-2"><a href="/accounts/login/" class="text-white text-decoration-none">Log In</a></li>
+            </ul>
+        </nav>
+
+<div class="register-container">
+    <div class="register-form">
+        <h2>Register to Flappybet.gg</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        {% if messages %}
+            {% for message in messages %}
+                Swal.fire({
+                    icon: '{% if message.tags == "success" %}success{% elif message.tags == "error" %}error{% else %}info{% endif %}',
+                    title: '{{ message }}',
+                    confirmButtonText: 'OK'
+                });
+            {% endfor %}
+        {% endif %}
+    });
+</script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+{% endblock %}

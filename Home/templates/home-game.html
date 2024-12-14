@@ -1,0 +1,59 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappybet.gg</title>
+    <link rel="stylesheet" href="{% static 'css/game-style.css' %}">
+    <link rel="icon" href="{% static 'images.flappybet.jpg' %}" type="image/x-icon">
+</head>
+<body>
+   
+    <section class="game-navigation">
+        <div class="game-card">
+            <h2>Flappybet</h2>
+            <a href="/Game/flappybet/"><img src="{% static 'images/ads.jpg' %}" alt="Poker"></a>
+            <a href="/Game/flappybet/" class="play-button">Play Now</a>
+        </div> 
+
+        <div class="game-card">
+            <img src="{% static 'images/slot-machines.png' %}" alt="Slot Machines">
+            <h2>Slot Machines</h2>
+            <p>Spin and win big prizes!</p>
+            <a href="/games/slot-machines" class="play-button">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="{% static 'images/blackjack.png' %}" alt="Blackjack">
+            <h2>Blackjack</h2>
+            <p>Try your luck at 21!</p>
+            <a href="/games/blackjack" class="play-button">Play Now</a>
+        </div>
+       
+        <div class="game-card">
+            <img src="{% static 'images/roulette.png' %}" alt="Roulette">
+            <h2>Roulette</h2>
+            <p>Spin the wheel of fortune!</p>
+            <a href="/games/roulette" class="play-button">Play Now</a>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            {% if messages %}
+                {% for message in messages %}
+                    Swal.fire({
+                        icon: '{% if message.tags == "success" %}success{% elif message.tags == "error" %}error{% else %}info{% endif %}',
+                        title: '{{ message }}',
+                        confirmButtonText: 'OK'
+                    });
+                {% endfor %}
+            {% endif %}
+        });
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+    
+</body>
+</html>
+{% endblock %}
