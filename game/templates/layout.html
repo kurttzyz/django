@@ -1,0 +1,85 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/dashboard-style.css' %}">
+
+<link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+
+
+<div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul>
+             <h1>Welcome to your Dashboard {{ user.username }}!</h1>
+             <hr>
+            <li><a href="/Game/dashboard/">Dashboard</a></li>
+            <hr>
+            <li><a href="/Game/flappybet.icons/">Games</a></li>
+            <hr>
+            <li><a href="/Game/dashboard/">Wallet</a></li>
+            <hr>
+            <li><a href="/Game/flappybet.referal/">Rewards</a></li>
+            <hr>
+            <li><a href="/Payments/method/">Deposit</a></li>
+            <hr>
+            <li><a href="/Payments/withdraw/">Withdraw</a></li>
+            <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn-logout">Log Out</button>
+            </form>
+        </ul>
+    </nav>
+   
+  <main>
+    {% block content %}
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Live Chat</h3>
+            <span class="close-chat">&times;</span>
+        </div>
+        <div class="chat-body">
+            <div class="message incoming">
+                <p>Hello! How can we help you?</p>
+            </div>
+            <div class="message outgoing">
+                <p>I need help with my account.</p>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message..." />
+            <button>Send</button>
+           
+        </div>
+    </div>
+    <!-- Open Chat Button -->
+    <button class="open-chat">Chat with Us</button>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+  </main>
+
+  <div class="chat-container">
+    <div class="chat-header">
+        <h3>Live Chat</h3>
+        <span class="close-chat">&times;</span>
+    </div>
+    <div class="chat-body">
+        <div class="message incoming">
+            <p>Hello! How can we help you?</p>
+        </div>
+        <div class="message outgoing">
+            <p>I need help with my account.</p>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" placeholder="Type your message..." />
+        <button>Send</button>
+       
+    </div>
+</div>
+<!-- Open Chat Button -->
+<button class="open-chat">Chat with Us</button>
+<script src="{% static 'js/script.js' %}"></script>
+
+
+
+
+
+

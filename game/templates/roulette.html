@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Game</title>
+    <link rel="stylesheet" href="{% static 'css/roulette-style.css' %}">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>PHLBOSS Roulette</h1>
+            <p>Balance: ₱<span id="balance">10.00</span></p>
+        </header>
+        
+        <div class="roulette-wheel">
+            <div class="wheel" id="wheel">
+                <!-- Wheel sections -->
+                <div class="section blue"></div>
+                <div class="section purple"></div>
+                <div class="section chest"></div>
+                <!-- Add more sections dynamically -->
+            </div>
+            <div class="pointer"></div>
+        </div>
+
+        <div class="countdown">
+            <p>Game starts in: <span id="countdown-timer">10</span>s</p>
+        </div>
+
+        <div class="betting-panel">
+            <div class="bet-options">
+                <button class="bet-option" data-multiplier="1.95">Blue (1.95x)</button>
+                <button class="bet-option" data-multiplier="1.95">Purple (1.95x)</button>
+                <button class="bet-option" data-multiplier="14">Chest (14x)</button>
+            </div>
+            <input type="number" id="bet-amount" placeholder="Enter bet amount">
+            <button id="place-bet">Place Bet</button>
+        </div>
+
+        <div class="previous-rolls">
+            <h3>Previous Rolls</h3>
+            <div id="roll-history">
+                <!-- Rolls added dynamically -->
+            </div>
+        </div>
+
+        <footer>
+            <p>Online Betting</p>
+            <ul id="online-betting">
+                <!-- Live bets added dynamically -->
+            </ul>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/roulette.js' %}"></script>
+</body>
+</html>
+
+

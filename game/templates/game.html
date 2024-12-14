@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Flappybet.gg</title>
+    <link rel="stylesheet" href="{% static 'css/game-style.css' %}">
+    <link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1>Game Hub</h1>
+        <p>Select a game to start playing!</p>
+    </header>
+    <section class="game-navigation">
+        <div class="game-card">
+            <a href="/Game/flappybet/"><img src="{% static 'images/ads.jpg' %}" alt="Poker"></a>
+            <h2>Flappybet</h2>
+            <p>Challenge your skills in Flappy Bird!</p>
+            <a href="/Game/flappybet/" class="play-button">Play Now</a>
+        </div> 
+
+        <div class="game-card">
+            <img src="{% static 'images/slot-machines.png' %}" alt="Slot Machines">
+            <h2>Slot Machines</h2>
+            <p>Spin and win big prizes!</p>
+            <a href="/Game/flappybet.spin/" class="play-button">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="{% static 'images/blackjack.png' %}" alt="Blackjack">
+            <h2>Blackjack</h2>
+            <p>Try your luck at 21!</p>
+            <a href="/games/blackjack" class="play-button">Play Now</a>
+        </div>
+       
+        <div class="game-card">
+            <img src="{% static 'images/roulette.png' %}" alt="Roulette">
+            <h2>Roulette</h2>
+            <p>Spin the wheel of fortune!</p>
+            <a href="/Game/flappybet.roulette/" class="play-button">Play Now</a>
+        </div>
+    </section>
+</body>
+</html>
+
+{% endblock %}

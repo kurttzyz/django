@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referal | Flappybet.gg</title>
+    <link href="{% static 'css/referal-style.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1>Referral Program</h1>
+        <p>Invite friends and earn rewards!</p>
+    </header>
+    <section class="referral-summary">
+        <div class="summary-card">
+            <h2>Total Referrals</h2>
+            <p>{{ total_referrals }} People</p>
+        </div>
+        <div class="summary-card">
+            <h2>Successful Referrals</h2>
+            <p>{{ successful_referrals }} People</p>
+        </div>
+        <div class="summary-card">
+            <h2>Earned Bonus</h2>
+            <p>₱{{ total_bonus }}</p>
+        </div>
+        <div class="summary-card">
+            <h2>Pending Referrals</h2>
+            <p>{{ pending_referrals }} People</p>
+        </div>
+    </section>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Gambling Game</title>
+    <link rel="stylesheet" href="{% static 'css/flappy-style.css' %}">
+    <link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+    
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <div id="overlay">
+        <button id="startGame">Start Game</button>
+        <button id="playAgain" style="display:none;">Play Again</button>
+    </div>
+    <script src="{% static 'js/flappy.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+{% load static %}
+<title>
+    Home | Flappybet.gg
+</title>
+<link rel="icon" href="{% static 'images/flappybet.jpg' %}" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'css/home.css' %}"
+<div class="main-content">
+    <!-- Wallet Info Card -->
+    <div class="card">
+        <h3>Wallet Balance</h3>
+        <p><strong>₱{{ wallet.balance }}</strong></p>
+        <a href="/Payments/method/"><button class="btn-recharge">Recharge Wallet</button></a>
+    </div>
+
+    <!-- Activities Card -->
+    <div class="card">
+        <h3>Your Activities</h3>
+        <ul>
+            <li>Last Played: Slot Machines</li>
+            <li>Total Wins: ₱{{ total_wins }}</li>
+            <li>Total Bets: ₱{{ total_bets }}</li>
+        </ul>
+    </div>
+
+    <!-- Additional Cards -->
+    <div class="card">
+        <h4>Your Referral</h4>
+        <ul>
+            <li>Referrals: 5</li>
+            <li>Total Earnings: ₱{{ referral_earnings }}</li>
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}
+
